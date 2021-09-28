@@ -1,0 +1,21 @@
+filter_name:
+  #- 'filter_hc_mdd_female'
+  #- 'filter_hc_mdd_male'
+  #- 'filter_hc_mdd_bodily_pain_25'
+  #- 'filter_hc_mdd_general_health_25'
+  #- 'filter_hc_mdd_physical_functioning_25'
+  #- 'filter_hc_mdd_vitality_25'
+  #- 'filter_hc_mdd_social_functioning_25'
+  #- 'filter_hc_mdd_mental_health_25'
+  #- "filter_hc_mdd_pss_20"
+  #- "filter_hc_mdd_gaf_20"
+  #- "filter_mdd_gaf_20"
+  #- "filter_hc_mdd_ctq_20"
+  #- "filter_mdd_ctq_20"
+  - "filter_hc_mdd"
+  - "filter_hc_mdd_acute"
+  #- "filter_hc_mdd_remitted"
+  - "filter_hc_mdd_severe"
+  #- "filter_hc_mdd_extreme20"
+  #- 'filter_mdd_bd'
+  #- 'filter_hc_bd'

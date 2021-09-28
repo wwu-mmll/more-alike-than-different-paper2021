@@ -1,0 +1,8 @@
+class: Anova
+params:
+  method: "mass_anova"
+  group_contrast: 'C(Group, Sum)'
+  covariates: ['Alter', 'Geschlecht', 'C1', 'C2', 'C3']
+  ss_type: 3
+  n_bootstrap: 1000
+  skip: True

@@ -1,0 +1,23 @@
+setup:
+  analysis_name: "Neuroticism_no_BDI"
+  result_dir: "../results/clinical/"
+  filter_name:
+    partial: 'configs/partials/sample_filter.yaml'
+data:
+  class: ClinicalData
+  params:
+    sample_file: '../raw_data/clinical/Clinical_DataFreeze1-3-30102020_macbook.csv'
+    variables:
+      - "NEOFFI_Neurotizismus"
+    skip:  False
+statistics:
+  class: Anova
+  params:
+    method: "mass_anova"
+    group_contrast: 'C(Group, Sum)'
+    covariates: [ 'Alter', 'Geschlecht', 'Site', 'BDI_Sum' ]
+    ss_type: 3
+    n_bootstrap: 1000
+    skip: True
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

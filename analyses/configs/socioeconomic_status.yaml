@@ -1,0 +1,16 @@
+setup:
+  analysis_name: "SocioeconomicStatus"
+  result_dir: "../results/clinical/"
+  filter_name:
+    partial: 'configs/partials/sample_filter.yaml'
+data:
+  class: ClinicalData
+  params:
+    sample_file: '../raw_data/clinical/Clinical_DataFreeze1-3-30102020_macbook.csv'
+    variables:
+      - "Haushaltsnetto"
+    skip:  False
+statistics:
+  partial: 'configs/partials/statistics_clinical.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

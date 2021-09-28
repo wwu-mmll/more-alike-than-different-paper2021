@@ -1,0 +1,16 @@
+setup:
+  analysis_name: "SocialSupport"
+  result_dir: "../results/clinical/"
+  filter_name:
+    partial: 'configs/partials/sample_filter_site.yaml'
+data:
+  class: ClinicalData
+  params:
+    sample_file: '../raw_data/clinical/Clinical_DataFreeze1-3-30102020_macbook.csv'
+    variables:
+      - "FSozU_Sum"
+    skip:  False
+statistics:
+  partial: 'configs/partials/statistics_clinical_site.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

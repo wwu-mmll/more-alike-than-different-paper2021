@@ -1,0 +1,41 @@
+setup:
+  analysis_name: "Polygenic Risk Scores"
+  result_dir: "../results/"
+  filter_name:
+    partial: 'configs/partials/sample_filter_gender.yaml'
+preprocessing:
+  class: PRSPreprocessing
+  params:
+    subjects: '../raw_data/prs/PRS_DataFreeze1-3-30102020_macbook.csv'
+    prs_file: '../raw_data/prs/PRS_DataFreeze1-3-30102020_macbook.csv'
+    pheno_file: '../raw_data/clinical/Clinical_DataFreeze1-3-30102020_macbook.csv'
+    output_path: '../data/prs/'
+    plink_path: '/spm-data/vault-data3/mmll/data/FOR2107/session01/genetics/Sciebo'
+    skip:  False
+dataloader:
+  class: PRSData
+  params:
+    data_path: '../data/prs/'
+    prs_variants:
+      #- 'PRScs_ADHD_auto'
+      #- 'PRScs_Alcohol_auto'
+      #- 'PRScs_Anorexia_auto'
+      #- 'PRScs_ASD_auto'
+      #- 'PRScs_BIP2_auto'
+      #- 'PRScs_CDG2_auto'
+      - 'PRScs_MDD_Howard_auto'
+      #- 'PRScs_SCZ2_auto'
+      #- 'PRScs_SCZ_Pardinas_auto'
+      #- 'PRScs_Extraversion_auto'
+      #- 'PRScs_NEURO_Luciano_auto'
+      #- 'PRScs_Hedonic_auto'
+      #- 'PRScs_EA3_auto'
+      #- 'PRScs_Intelligence_auto'
+      #- 'PRScs_Chronotype_auto'
+      #- 'PRScs_BMI_auto'
+      #- 'PRScs_CAD_auto'
+    skip: False
+statistics:
+  partial: 'configs/partials/statistics_genetics_gender.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

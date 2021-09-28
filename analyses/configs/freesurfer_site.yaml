@@ -1,0 +1,24 @@
+setup:
+  analysis_name: "Freesurfer"
+  result_dir: "../results/"
+  filter_name:
+    partial: 'configs/partials/sample_filter_site.yaml'
+preprocessing:
+  class: FreesurferPreprocessing
+  params:
+    subjects: "../raw_data/freesurfer/Freesurfer_DataFreeze1-3-30102020_NRW_corrected_macbook.csv"
+    freesurfer_path: "/spm-data/vault-data4/FOR2107/3rdWave_upload_Nov2019/Baseline/FreesurferSegmentations_baseline/"
+    output_path: "../data/freesurfer/"
+    skip: True
+data:
+  class: FreesurferData
+  params:
+    data_path: "../data/freesurfer/"
+    pheno_file: "../raw_data/freesurfer/Freesurfer_DataFreeze1-3-30102020_NRW_corrected_macbook.csv"
+    remove_outlier: True
+    remove_nan: "impute" # "drop", "impute_mean"
+    skip:  False
+statistics:
+  partial: 'configs/partials/statistics_mri_site.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

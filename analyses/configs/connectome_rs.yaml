@@ -1,0 +1,25 @@
+setup:
+  analysis_name: "RS Connectivities"
+  result_dir: "../results/"
+  filter_name:
+    partial: 'configs/partials/sample_filter.yaml'
+preprocessing:
+  class: RestingStatePreprocessing
+  params:
+    resting_state_path: '/spm-data/vault-data3/mmll/data/FOR2107/session01/neuroimaging/RestingState/'
+    output_path: '../data/resting_state/connectome/'
+    sample_file: '../raw_data/resting_state/RS_DataFreeze1-3-30102020_macbook.csv'
+    atlases:
+      - 'Schaefer100-17'
+    skip: True
+data:
+  class: RestingStateData
+  params:
+    sample_file: '../raw_data/resting_state/RS_DataFreeze1-3-30102020_macbook.csv'
+    data_path: '../data/resting_state/connectome/'
+    atlas: 'Schaefer100-17'
+  skip: False
+statistics:
+  partial: 'configs/partials/statistics_mri.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

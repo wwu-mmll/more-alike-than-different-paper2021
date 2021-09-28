@@ -1,0 +1,36 @@
+setup:
+  analysis_name: "DTI FA"
+  result_dir: "../results/all/"
+  filter_name:
+    - "filter_hc_mdd"
+plot:
+  class: SummaryPlotMatplotlib
+  params:
+    corrected_p: True
+    plot_p_values: False
+    use_sample_filter: False
+    result_folder_analyses:
+      - '../results/DTI FA/hc_mdd'
+      - '../results/DTI FA/hc_mdd_acute'
+      - '../results/DTI FA/hc_mdd_severe'
+      - '../results/DTI FA/hc_mdd_male'
+      - '../results/DTI FA/hc_mdd_female'
+      - '../results/DTI FA/hc_mdd_marburg'
+      - '../results/DTI FA/hc_mdd_muenster'
+    modality_names:
+      - 'HC vs MDD'
+      - 'HC vs acute MDD'
+      - 'HC vs chronic MDD'
+      - 'HC vs MDD (male)'
+      - 'HC vs MDD (female)'
+      - 'HC vs MDD (Marburg)'
+      - 'HC vs MDD (Muenster)'
+    group:
+      - 'DTI FA'
+      - 'DTI FA'
+      - 'DTI FA'
+      - 'DTI FA (Gender)'
+      - 'DTI FA (Gender)'
+      - 'DTI FA (Site)'
+      - 'DTI FA (Site)'
+    skip: False

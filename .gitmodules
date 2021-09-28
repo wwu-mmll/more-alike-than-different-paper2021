@@ -1,0 +1,13 @@
+
+[submodule "externals/multi_modality_creator"]
+	path = externals/multi_modality_pipeline
+	url = https://github.com/wwu-mmll/multi_modality_datacreator.git
+[submodule "externals/resample"]
+	path = externals/resample
+	url = https://github.com/wwu-mmll/resample.git
+[submodule "externals/photonai_graph"]
+	path = externals/photonai_graph
+	url = https://github.com/wwu-mmll/photonai_graph.git
+[submodule "externals/gists"]
+	path = externals/gists
+	url = https://github.com/wwu-mmll/gists.git

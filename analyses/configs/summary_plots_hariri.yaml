@@ -1,0 +1,36 @@
+setup:
+  analysis_name: "Hariri"
+  result_dir: "../results/all/"
+  filter_name:
+    - "filter_hc_mdd"
+plot:
+  class: SummaryPlotMatplotlib
+  params:
+    corrected_p: True
+    plot_p_values: False
+    use_sample_filter: False
+    result_folder_analyses:
+      - '../results/hariri/Hariri Faces/hc_mdd'
+      - '../results/hariri/Hariri Faces/hc_mdd_acute'
+      - '../results/hariri/Hariri Faces/hc_mdd_severe'
+      - '../results/hariri/Hariri Faces/hc_mdd_male'
+      - '../results/hariri/Hariri Faces/hc_mdd_female'
+      - '../results/hariri/Hariri Faces/hc_mdd_marburg'
+      - '../results/hariri/Hariri Faces/hc_mdd_muenster'
+    modality_names:
+      - 'HC vs MDD'
+      - 'HC vs acute MDD'
+      - 'HC vs chronic MDD'
+      - 'HC vs MDD (male)'
+      - 'HC vs MDD (female)'
+      - 'HC vs MDD (Marburg)'
+      - 'HC vs MDD (Muenster)'
+    group:
+      - 'Emotional Face Matching'
+      - 'Emotional Face Matching'
+      - 'Emotional Face Matching'
+      - 'Emotional Face Matching (Gender)'
+      - 'Emotional Face Matching (Gender)'
+      - 'Emotional Face Matching (Site)'
+      - 'Emotional Face Matching (Site)'
+    skip: False

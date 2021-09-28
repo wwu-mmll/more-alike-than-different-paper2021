@@ -1,0 +1,75 @@
+setup:
+  analysis_name: "IncludingPhenotypeIncludingSubtypes"
+  result_dir: "../results/all/"
+  filter_name:
+    - "filter_hc_mdd"
+plot:
+  class: SummaryPlotMatplotlib
+  params:
+    corrected_p: True
+    use_sample_filter: False
+    plot_p_values: False
+    result_folder_analyses:
+      - '../results/Freesurfer/hc_mdd'
+      - '../results/Freesurfer/hc_mdd_acute'
+      - '../results/hariri/Hariri Faces/hc_mdd'
+      - '../results/hariri/Hariri Faces/hc_mdd_acute'
+      - '../results/DTI FA/hc_mdd'
+      - '../results/DTI FA/hc_mdd_acute'
+      - '../results/DTI MD/hc_mdd'
+      - '../results/DTI MD/hc_mdd_acute'
+      - '../results/dti/DTI Network Parameter/hc_mdd'
+      - '../results/dti/DTI Network Parameter/hc_mdd_acute'
+      - '../results/RS Connectivities/hc_mdd'
+      - '../results/RS Connectivities/hc_mdd_acute'
+      - '../results/rs/RS Network Parameter/hc_mdd'
+      - '../results/rs/RS Network Parameter/hc_mdd_acute'
+      - '../results/Polygenic Risk Scores/hc_mdd'
+      - '../results/Polygenic Risk Scores/hc_mdd_acute'
+      - '../results/clinical/SocialSupport/hc_mdd'
+      - '../results/clinical/SocialSupport/hc_mdd_acute'
+      - '../results/clinical/CTQ/hc_mdd'
+      - '../results/clinical/CTQ/hc_mdd_acute'
+    modality_names:
+      - 'Freesurfer'
+      - 'Freesurfer Acute MDD'
+      - 'Face Matching Task'
+      - 'Face Matching Task Acute MDD'
+      - 'DTI FA'
+      - 'DTI FA Acute MDD'
+      - 'DTI MD'
+      - 'DTI MD Acute MDD'
+      - 'DTI Network Parameter'
+      - 'DTI Network Parameter Acute MDD'
+      - 'RS Connectivity'
+      - 'RS Connectivity Acute MDD'
+      - 'RS Network Parameter'
+      - 'RS Network Parameter Acute MDD'
+      - 'Polygenic Risk Scores'
+      - 'Polygenic Risk Scores Acute MDD'
+      - 'Social Support'
+      - 'Social Support Acute MDD'
+      - 'Childhood Maltreatment'
+      - 'Childhood Maltreatment Acute MDD'
+    group:
+      - 'Structural MRI'
+      - 'Structural MRI'
+      - 'Task-based Functional MRI'
+      - 'Task-based Functional MRI'
+      - 'Structural Connectome'
+      - 'Structural Connectome'
+      - 'Structural Connectome'
+      - 'Structural Connectome'
+      - 'Structural Connectome'
+      - 'Structural Connectome'
+      - 'Functional Connectome'
+      - 'Functional Connectome'
+      - 'Functional Connectome'
+      - 'Functional Connectome'
+      - 'Genetics'
+      - 'Genetics'
+      - 'Environment'
+      - 'Environment'
+      - 'Environment'
+      - 'Environment'
+    skip: False

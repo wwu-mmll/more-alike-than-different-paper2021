@@ -1,0 +1,8 @@
+class: Anova
+params:
+  method: "mass_anova"
+  group_contrast: 'C(Group, Sum)'
+  covariates: ['Alter', 'Dummy_BC_MR_pre', 'Dummy_BC_MR_post']
+  ss_type: 3
+  n_bootstrap: 1000
+  skip: False

@@ -1,0 +1,4 @@
+class: PipelinePlot
+params:
+  group_variable: 'Group'
+  skip: False

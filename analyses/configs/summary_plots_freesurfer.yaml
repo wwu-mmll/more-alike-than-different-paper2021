@@ -1,0 +1,36 @@
+setup:
+  analysis_name: "Freesurfer"
+  result_dir: "../results/all/"
+  filter_name:
+    - "filter_hc_mdd"
+plot:
+  class: SummaryPlotMatplotlib
+  params:
+    corrected_p: True
+    plot_p_values: False
+    use_sample_filter: False
+    result_folder_analyses:
+      - '../results/Freesurfer/hc_mdd'
+      - '../results/Freesurfer/hc_mdd_acute'
+      - '../results/Freesurfer/hc_mdd_severe'
+      - '../results/Freesurfer/hc_mdd_male'
+      - '../results/Freesurfer/hc_mdd_female'
+      - '../results/Freesurfer/hc_mdd_marburg'
+      - '../results/Freesurfer/hc_mdd_muenster'
+    modality_names:
+      - 'HC vs MDD'
+      - 'HC vs acute MDD'
+      - 'HC vs chronic MDD'
+      - 'HC vs MDD (male)'
+      - 'HC vs MDD (female)'
+      - 'HC vs MDD (Marburg)'
+      - 'HC vs MDD (Muenster)'
+    group:
+      - 'Freesurfer'
+      - 'Freesurfer'
+      - 'Freesurfer'
+      - 'Freesurfer (Gender)'
+      - 'Freesurfer (Gender)'
+      - 'Freesurfer (Site)'
+      - 'Freesurfer (Site)'
+    skip: False

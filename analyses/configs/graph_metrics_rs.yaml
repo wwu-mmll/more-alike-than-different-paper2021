@@ -1,0 +1,35 @@
+setup:
+  analysis_name: "RS Network Parameter"
+  result_dir: "../results/rs/"
+  filter_name:
+    partial: 'configs/partials/sample_filter.yaml'
+preprocessing:
+  class: GraphMetricsRestingState
+  params:
+    subjects: '../raw_data/resting_state/RS_DataFreeze1-3-30102020_macbook.csv'
+    resting_state_path: '/spm-data/Scratch/spielwiese_julian_blanke/modality_pipeline_data/resting_state'
+    output_path: '../data/resting_state/graph_metrics/'
+    atlases:
+      - 'Schaefer100-17'
+    metrics:
+      - 'global_efficiency'
+      - 'local_efficiency'
+      - 'clustering'
+      - 'average_clustering'
+      - 'degree_centrality'
+      - 'betweenness_centrality'
+      - 'degree_assortativity_coefficient'
+    n_processes: 10
+    skip: True
+data:
+  class: GraphMetricsRSData
+  params:
+    atlas:
+      - 'Schaefer100-17'
+    pheno_file: '../raw_data/resting_state/RS_DataFreeze1-3-30102020_macbook.csv'
+    data_path: '../data/resting_state/graph_metrics/'
+    skip: False
+statistics:
+  partial: 'configs/partials/statistics_mri.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

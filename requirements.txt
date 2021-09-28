@@ -1,0 +1,18 @@
+numpy
+pandas
+tabulate
+statsmodels
+nipype
+tqdm
+seaborn >= 0.11.0
+matplotlib
+scipy >= 1.5.0
+sklearn
+pyyaml
+nipype
+photonai
+photonai_neuro
+mat73
+dgl
+torch
+rpy2

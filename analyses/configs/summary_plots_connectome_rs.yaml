@@ -1,0 +1,36 @@
+setup:
+  analysis_name: "RS Connectivities"
+  result_dir: "../results/all/"
+  filter_name:
+    - "filter_hc_mdd"
+plot:
+  class: SummaryPlotMatplotlib
+  params:
+    corrected_p: True
+    plot_p_values: False
+    use_sample_filter: False
+    result_folder_analyses:
+      - '../results/RS Connectivities/hc_mdd'
+      - '../results/RS Connectivities/hc_mdd_acute'
+      - '../results/RS Connectivities/hc_mdd_severe'
+      - '../results/RS Connectivities/hc_mdd_male'
+      - '../results/RS Connectivities/hc_mdd_female'
+      - '../results/RS Connectivities/hc_mdd_marburg'
+      - '../results/RS Connectivities/hc_mdd_muenster'
+    modality_names:
+      - 'HC vs MDD'
+      - 'HC vs acute MDD'
+      - 'HC vs chronic MDD'
+      - 'HC vs MDD (male)'
+      - 'HC vs MDD (female)'
+      - 'HC vs MDD (Marburg)'
+      - 'HC vs MDD (Muenster)'
+    group:
+      - 'RS Connectivity'
+      - 'RS Connectivity'
+      - 'RS Connectivity'
+      - 'RS Connectivity (Gender)'
+      - 'RS Connectivity (Gender)'
+      - 'RS Connectivity (Site)'
+      - 'RS Connectivity (Site)'
+    skip: False

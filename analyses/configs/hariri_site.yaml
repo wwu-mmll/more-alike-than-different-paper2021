@@ -1,0 +1,34 @@
+setup:
+  analysis_name: "Hariri Faces"
+  result_dir: "../results/hariri/"
+  filter_name:
+    partial: 'configs/partials/sample_filter_site.yaml'
+preprocessing:
+  class: HaririPreprocessing
+  params:
+    output_path: "../data/hariri/"
+    subjects: "../raw_data/hariri/Hariri_DataFreeze1-3-30102020_macbook.csv"
+    voxel_size: 3
+    create_nifti_pickles: False
+    skip: True
+data:
+  class: HaririData
+  params:
+    pheno_file: "../raw_data/hariri/Hariri_DataFreeze1-3-30102020_macbook.csv"
+    data_path: "../data/hariri/"
+    skip: False
+SPM:
+  class: SpmGlmStep
+  params:
+    overwrite: True
+    matlab_path: "/spm-data/it-share/public-applications/MATLAB/R2019a/bin/matlab"
+    spm_path: "/spm-data/vault-data3/mmll/software/spm12_uncompiled/spm12"
+    type: 'functional'
+    tfce_perms: 16
+    correction_method: 'RandomField'
+    load_existing: False
+    skip: False
+statistics:
+  partial: 'configs/partials/statistics_hariri_site.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

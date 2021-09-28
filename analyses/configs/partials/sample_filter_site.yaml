@@ -1,0 +1,7 @@
+filter_name:
+  - "filter_hc_mdd_marburg"
+  - "filter_hc_mdd_acute_marburg"
+  - "filter_hc_mdd_severe_marburg"
+  - "filter_hc_mdd_muenster"
+  - "filter_hc_mdd_acute_muenster"
+  - "filter_hc_mdd_severe_muenster"

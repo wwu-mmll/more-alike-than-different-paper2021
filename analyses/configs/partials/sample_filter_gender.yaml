@@ -1,0 +1,7 @@
+filter_name:
+  - "filter_hc_mdd_male"
+  - "filter_hc_mdd_acute_male"
+  - "filter_hc_mdd_severe_male"
+  - "filter_hc_mdd_female"
+  - "filter_hc_mdd_acute_female"
+  - "filter_hc_mdd_severe_female"

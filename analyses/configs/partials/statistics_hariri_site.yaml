@@ -1,0 +1,8 @@
+class: Anova
+params:
+  method: "anova_bootstrapped_es"
+  group_contrast: 'C(Group, Sum)'
+  covariates: ['Alter', 'Geschlecht']
+  ss_type: 3
+  n_bootstrap: 1000
+  skip: False

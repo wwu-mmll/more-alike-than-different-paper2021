@@ -1,0 +1,29 @@
+setup:
+  analysis_name: "DTI FA"
+  result_dir: "../results/"
+  filter_name:
+    partial: 'configs/partials/sample_filter_site.yaml'
+preprocessing:
+  class: DTIPreprocessing
+  params:
+    dti_file: '/spm-data/vault-data3/mmll/data/FOR2107/session01/neuroimaging/DTI/FOR_DF3_DTI_Connectivity_No_Outlier.mat'
+    output_path: '../data/dti/connectome/'
+    sample_file: '../raw_data/dti/DTI_DataFreeze1-3-30092020_macbook.csv'
+    parameters:
+      - 'number of streamlines'
+      - 'fractional anisotropy'
+      - 'axial diffusivity'
+      - 'radial diffusivity'
+      - 'mean diffusivity'
+    skip: True
+data:
+  class: DTIData
+  params:
+    sample_file: '../raw_data/dti/DTI_DataFreeze1-3-30092020_macbook.csv'
+    data_path: '../data/dti/connectome/'
+    parameter: 'fractional_anisotropy'
+  skip: False
+statistics:
+  partial: 'configs/partials/statistics_mri_site.yaml'
+plot:
+  partial: 'configs/partials/pipeline_plot.yaml'

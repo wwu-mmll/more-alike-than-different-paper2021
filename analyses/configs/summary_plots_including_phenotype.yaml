@@ -1,0 +1,64 @@
+setup:
+  analysis_name: "IncludingPhenotype"
+  result_dir: "../results/all_test/"
+  filter_name:
+    #- "filter_hc_mdd"
+    - "filter_hc_mdd_acute"
+    - "filter_hc_mdd_severe"
+    #- "filter_hc_mdd_male"
+    #- "filter_hc_mdd_acute_male"
+    #- "filter_hc_mdd_severe_male"
+    #- "filter_hc_mdd_female"
+    #- "filter_hc_mdd_acute_female"
+    #- "filter_hc_mdd_severe_female"
+    #- "filter_hc_mdd_marburg"
+    #- "filter_hc_mdd_acute_marburg"
+    #- "filter_hc_mdd_severe_marburg"
+    #- "filter_hc_mdd_muenster"
+    #- "filter_hc_mdd_acute_muenster"
+    #- "filter_hc_mdd_severe_muenster"
+plot:
+  class: SummaryPlotMatplotlib
+  params:
+    corrected_p: True
+    plot_p_values: False
+    result_folder_analyses:
+      #- '../results/Cat12'
+      - '../results/Freesurfer'
+      - '../results/hariri/Hariri Faces'
+      - '../results/DTI FA'
+      - '../results/DTI MD'
+      - '../results/dti/DTI Network Parameter'
+      - '../results/RS Connectivities'
+      - '../results/rs/RS Network Parameter'
+      - '../results/Polygenic Risk Scores'
+      - '../results/clinical/SocialSupport'
+      - '../results/clinical/CTQ'
+      #- '../results/clinical/Neuroticism'
+    modality_names:
+      #- 'VBM'
+      - 'Freesurfer'
+      - 'Face Matching Task'
+      - 'DTI FA'
+      - 'DTI MD'
+      - 'DTI Network Parameter'
+      - 'RS Connectivity'
+      - 'RS Network Parameter'
+      - 'MDD PRS'
+      - 'Social Support'
+      - 'Childhood Maltreatment'
+      #- 'Neuroticism'
+    group:
+      #- 'Structural MRI T1'
+      - 'Structural MRI'
+      - 'Task-based Functional MRI'
+      - 'Structural Connectome'
+      - 'Structural Connectome'
+      - 'Structural Connectome'
+      - 'Functional Connectome'
+      - 'Functional Connectome'
+      - 'Genetics'
+      - 'Environment'
+      - 'Environment'
+      #- 'Environment and Personality (N=1797/1799/1793)'
+    skip: False
